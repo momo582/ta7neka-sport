@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #2c3e50; /* Darker blue/grey */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -39,7 +39,7 @@ header {
 }
 
 nav {
-    background-color: #34495e;
+    background-color: #34495e; /* Slightly lighter than header */
     padding: 10px 0;
     text-align: center;
     margin-top: 10px;
@@ -54,7 +54,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #1abc9c;
+    background-color: #1abc9c; /* Green accent color */
 }
 
 main {
@@ -67,8 +67,8 @@ main {
 }
 
 h2, h3 {
-    color: #2c3e50;
-    border-bottom: 2px solid #1abc9c;
+    color: #2c3e50; /* Dark text for headings */
+    border-bottom: 2px solid #1abc9c; /* Green underline */
     padding-bottom: 10px;
     margin-bottom: 20px;
     text-align: right; /* Align headers right for RTL */
@@ -92,7 +92,7 @@ h2, h3 {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    min-width: 600px; /* Ensure table has a minimum width */
+    min-width: 600px; /* Ensure table has a minimum width for better presentation */
 }
 
 #matches-table th, #matches-table td {
@@ -102,7 +102,7 @@ h2, h3 {
 }
 
 #matches-table th {
-    background-color: #3498db;
+    background-color: #3498db; /* Blue table header */
     color: white;
     font-weight: bold;
 }
@@ -115,28 +115,50 @@ h2, h3 {
     background-color: #e2e2e2;
 }
 
-/* Player Cards */
+/* Player Cards (نجوم التحنيكة) */
+#players-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between categories */
+}
+
+.player-category {
+    width: 100%;
+    text-align: center;
+}
+
+.player-category h3 {
+    background-color: #e9f5ff; /* Light blue background for category title */
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #007bff; /* Bright blue text */
+    font-size: 1.5em;
+    border-bottom: none; /* Remove default h3 border */
+}
+
 .player-cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Center cards */
     gap: 20px;
-    margin-top: 30px;
+    padding: 10px;
 }
 
 .player-card {
-    background-color: #ecf0f1;
+    background-color: #ecf0f1; /* Light grey background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
     text-align: center;
     width: 180px; /* Fixed width for cards */
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     cursor: pointer; /* Indicate clickable */
 }
 
 .player-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .player-card-img {
@@ -145,7 +167,7 @@ h2, h3 {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #1abc9c;
+    border: 3px solid #1abc9c; /* Green accent border */
 }
 
 .player-card h4 {
@@ -267,7 +289,7 @@ h2, h3 {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #f39c12; /* Player border color */
+    border: 2px solid #f39c12; /* Player border color - orange/yellow */
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
     transition: transform 0.2s ease-in-out;
 }
@@ -293,23 +315,20 @@ h2, h3 {
 /* Goalkeeper */
 .gk-spot { top: 50%; left: 10%; transform: translate(-50%, -50%); }
 
-/* Defenders (4) */
-.df-spot { top: 50%; }
+/* Defenders (4) - Adjusted based on the image for better visual match */
 .df-rb { top: 80%; left: 25%; transform: translate(-50%, -50%); } /* Right Back */
 .df-cb1 { top: 60%; left: 35%; transform: translate(-50%, -50%); } /* Center Back 1 */
 .df-cb2 { top: 40%; left: 35%; transform: translate(-50%, -50%); } /* Center Back 2 */
 .df-lb { top: 20%; left: 25%; transform: translate(-50%, -50%); } /* Left Back */
 
 
-/* Midfielders (3) */
-.mf-spot { top: 50%; }
+/* Midfielders (3) - Adjusted based on the image for better visual match */
 .mf-cm1 { top: 70%; left: 55%; transform: translate(-50%, -50%); } /* Right Center Midfielder */
 .mf-dm { top: 50%; left: 60%; transform: translate(-50%, -50%); } /* Defensive Midfielder */
 .mf-cm2 { top: 30%; left: 55%; transform: translate(-50%, -50%); } /* Left Center Midfielder */
 
 
-/* Forwards (3) */
-.fw-spot { top: 50%; }
+/* Forwards (3) - Adjusted based on the image for better visual match */
 .fw-rw { top: 80%; left: 80%; transform: translate(-50%, -50%); } /* Right Wing */
 .fw-st { top: 50%; left: 90%; transform: translate(-50%, -50%); } /* Striker */
 .fw-lw { top: 20%; left: 80%; transform: translate(-50%, -50%); } /* Left Wing */
@@ -349,7 +368,7 @@ h2, h3 {
 .substitute-spot .pitch-player-img {
     width: 70px;
     height: 70px;
-    border: 2px solid #3498db;
+    border: 2px solid #3498db; /* Blue border for subs */
     margin-bottom: 5px;
 }
 
@@ -407,11 +426,13 @@ footer {
     background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
     padding-top: 60px;
     animation: fadeIn 0.3s ease-out;
+    justify-content: center; /* For centering content */
+    align-items: center; /* For centering content */
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* 5% from the top and centered */
+    margin: auto; /* Centered vertically and horizontally */
     padding: 30px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
@@ -495,8 +516,6 @@ footer {
         bottom: -12px;
     }
 
-
-
     .header-text-left, .header-text-right {
         font-size: 1.8em;
     }
@@ -533,6 +552,14 @@ footer {
 
     .header-text-left, .header-text-right {
         font-size: 1.5em;
+    }
+
+    .player-card {
+        width: calc(50% - 20px); /* Two cards per row with gap */
+        max-width: 200px; /* Limit individual card width */
+    }
+    .player-cards-container {
+        gap: 15px;
     }
 }
 
@@ -597,8 +624,11 @@ footer {
     }
 
     .player-card {
-        width: 140px; /* Smaller cards */
+        width: 100%; /* Full width on very small screens */
         padding: 15px;
+    }
+    .player-cards-container {
+        gap: 10px;
     }
 
     .player-card-img {
