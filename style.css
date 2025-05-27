@@ -1,0 +1,643 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    direction: rtl; /* Right-to-left for Arabic */
+    text-align: right;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between elements */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.header-text-left, .header-text-right {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header-image {
+    max-width: 80px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes it circular */
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    background-color: #34495e;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1abc9c;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: right; /* Align headers right for RTL */
+}
+
+.section-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: right; /* Align description right for RTL */
+}
+
+/* Matches Table */
+.table-responsive {
+    overflow-x: auto; /* Allows table to scroll horizontally on small screens */
+    margin-bottom: 30px;
+}
+
+#matches-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 600px; /* Ensure table has a minimum width */
+}
+
+#matches-table th, #matches-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+#matches-table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+#matches-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#matches-table tbody tr:hover {
+    background-color: #e2e2e2;
+}
+
+/* Player Cards */
+.player-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.player-card {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 180px; /* Fixed width for cards */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer; /* Indicate clickable */
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.player-card-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #1abc9c;
+}
+
+.player-card h4 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.3em;
+}
+
+.player-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Football Pitch (Dream Team) */
+.football-pitch {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 500px; /* Adjust height as needed */
+    background-color: #588f27; /* Darker green for pitch */
+    border: 5px solid white;
+    border-radius: 10px;
+    margin: 40px auto;
+    overflow: hidden; /* To keep pitch elements inside */
+}
+
+.goal {
+    position: absolute;
+    background-color: #eee;
+    width: 30px;
+    height: 100px;
+    border: 2px solid #333;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.goal-left {
+    left: 0;
+}
+
+.goal-right {
+    right: 0;
+}
+
+.center-circle {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-line {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.penalty-area {
+    position: absolute;
+    border: 2px solid white;
+    height: 200px;
+    width: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-penalty-area {
+    left: 0;
+}
+
+.right-penalty-area {
+    right: 0;
+}
+
+.goalkeeper-area {
+    position: absolute;
+    border: 2px solid white;
+    height: 90px;
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-goalkeeper-area {
+    left: 0;
+}
+
+.right-goalkeeper-area {
+    right: 0;
+}
+
+/* Player Positions */
+.player-positions {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.player-spot {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pitch-player-img {
+    width: 60px; /* Size of player image on pitch */
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f39c12; /* Player border color */
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+.pitch-player-img:hover {
+    transform: scale(1.1);
+}
+
+.player-name-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap; /* Prevent name from wrapping */
+    position: absolute;
+    bottom: -15px; /* Adjust to position below image */
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; /* Allow clicks to pass through to image */
+}
+
+/* Goalkeeper */
+.gk-spot { top: 50%; left: 10%; transform: translate(-50%, -50%); }
+
+/* Defenders (4) */
+.df-spot { top: 50%; }
+.df-rb { top: 80%; left: 25%; transform: translate(-50%, -50%); } /* Right Back */
+.df-cb1 { top: 60%; left: 35%; transform: translate(-50%, -50%); } /* Center Back 1 */
+.df-cb2 { top: 40%; left: 35%; transform: translate(-50%, -50%); } /* Center Back 2 */
+.df-lb { top: 20%; left: 25%; transform: translate(-50%, -50%); } /* Left Back */
+
+
+/* Midfielders (3) */
+.mf-spot { top: 50%; }
+.mf-cm1 { top: 70%; left: 55%; transform: translate(-50%, -50%); } /* Right Center Midfielder */
+.mf-dm { top: 50%; left: 60%; transform: translate(-50%, -50%); } /* Defensive Midfielder */
+.mf-cm2 { top: 30%; left: 55%; transform: translate(-50%, -50%); } /* Left Center Midfielder */
+
+
+/* Forwards (3) */
+.fw-spot { top: 50%; }
+.fw-rw { top: 80%; left: 80%; transform: translate(-50%, -50%); } /* Right Wing */
+.fw-st { top: 50%; left: 90%; transform: translate(-50%, -50%); } /* Striker */
+.fw-lw { top: 20%; left: 80%; transform: translate(-50%, -50%); } /* Left Wing */
+
+.dream-team-note {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Substitutes Section */
+.substitutes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.substitute-spot {
+    text-align: center;
+    cursor: pointer;
+    width: 100px; /* Smaller size for substitutes */
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative; /* For name overlay */
+}
+
+.substitute-spot:hover {
+    transform: translateY(-3px);
+}
+
+.substitute-spot .pitch-player-img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #3498db;
+    margin-bottom: 5px;
+}
+
+.substitute-spot .player-name-overlay {
+    position: static; /* Reset position for normal flow */
+    transform: none;
+    display: block; /* Make it always visible */
+    background-color: transparent;
+    color: #333;
+    font-size: 0.9em;
+    padding: 0;
+}
+
+/* Video Gallery */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.video-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px; /* Fixed height for videos */
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* Player Details Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    padding-top: 60px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Max width */
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slideIn 0.4s ease-out;
+    text-align: right; /* Align text right for RTL */
+}
+
+.close-button-modal {
+    color: #aaa;
+    float: left; /* Adjusted for RTL */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 15px; /* Adjusted for RTL */
+    cursor: pointer;
+}
+
+.close-button-modal:hover,
+.close-button-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-player-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1abc9c;
+    margin-bottom: 15px;
+}
+
+.modal-body h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-bottom: none; /* Remove border from modal h3 */
+    text-align: center; /* Center player name */
+}
+
+.modal-body p {
+    font-size: 1.1em;
+    margin: 8px 0;
+    color: #555;
+    text-align: right; /* Align paragraphs right for RTL */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .football-pitch {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+
+    .pitch-player-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .player-name-overlay {
+        font-size: 0.75rem;
+        bottom: -12px;
+    }
+
+
+
+    .header-text-left, .header-text-right {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    h2, h3 {
+        font-size: 1.8em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .football-pitch {
+        height: 350px; /* Further adjust height */
+    }
+
+    .pitch-player-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .player-name-overlay {
+        font-size: 0.7rem;
+        bottom: -10px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .header-text-left, .header-text-right {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    h2, h3 {
+        font-size: 1.5em;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    .header-text-left, .header-text-right {
+        font-size: 1.2em;
+    }
+
+    .header-image {
+        max-width: 60px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .football-pitch {
+        height: 300px; /* Even smaller height */
+        border: 3px solid white;
+    }
+
+    .pitch-player-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .player-name-overlay {
+        font-size: 0.65rem;
+        bottom: -8px;
+    }
+
+    .goal {
+        width: 20px;
+        height: 80px;
+    }
+
+    .penalty-area {
+        width: 100px;
+        height: 150px;
+    }
+
+    .goalkeeper-area {
+        width: 30px;
+        height: 70px;
+    }
+
+    .center-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .player-card {
+        width: 140px; /* Smaller cards */
+        padding: 15px;
+    }
+
+    .player-card-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .player-card h4 {
+        font-size: 1.1em;
+    }
+
+    .substitute-spot {
+        width: 80px;
+    }
+
+    .substitute-spot .pitch-player-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .video-item iframe {
+        height: 150px;
+    }
+
+    .modal-content {
+        margin: 15% auto;
+        padding: 15px;
+    }
+
+    .modal-player-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .modal-body h3 {
+        font-size: 1.2em;
+    }
+
+    .modal-body p {
+        font-size: 1em;
+    }
+}
