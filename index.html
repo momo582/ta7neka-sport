@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إحصائيات حجوزات الكورة - ta7neka sport</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css"> <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
 <body id="home-page">
     <header>
         <div class="header-content">
@@ -32,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -40,7 +41,7 @@
         <h2>نجوم التحنيكة</h2>
         <p class="section-description">تعرف على أبرز لاعبي فريق التحنيكة وإحصائياتهم الفردية. اكتشف من هم الأكثر تسجيلاً للأهداف أو صناعة للفرص.</p>
         <section id="players-section">
-            </section>
+        </section>
 
         <h2>تشكيلة الأحلام (4-3-3)</h2>
         <p class="section-description">تصفح تشكيلة فريق الأحلام الرسمية بتكتيك 4-3-3، والتي تضم أفضل اللاعبين في مراكزهم الأساسية على أرض الملعب.</p>
@@ -137,6 +138,62 @@
             </div>
         </section>
 
+        <h2>تشكيلة الخماسي (أفضل تشكيلة)</h2>
+        <p class="section-description">هنا يمكنك رؤية أفضل تشكيلة خماسي للفريق.</p>
+        <section id="best-5-a-side-formation-section">
+            <div class="football-pitch five-a-side-pitch">
+                <div class="player-positions five-a-side-positions">
+                    <div class="player-spot gk-spot-5v5" data-position="حارس">
+                        <img src="photo/محمد.jpg" alt="حارس" class="pitch-player-img">
+                        <span class="player-name-overlay">محمد ايمن<br>#</span>
+                    </div>
+                    <div class="player-spot df-1-5v5" data-position="مدافع">
+                        <img src="photo/ابراهيم شوشه.jpg" alt="مدافع 1" class="pitch-player-img">
+                        <span class="player-name-overlay">ابراهيم شوشه<br>#</span>
+                    </div>
+                    <div class="player-spot df-2-5v5" data-position="مدافع">
+                        <img src="photo/احمد عبد السلام.jpg" alt="مدافع 2" class="pitch-player-img">
+                        <span class="player-name-overlay">احمد عبد السلام<br>#</span>
+                    </div>
+                    <div class="player-spot fw-1-5v5" data-position="مهاجم">
+                        <img src="photo/محمد نشأت.png" alt="مهاجم 1" class="pitch-player-img">
+                        <span class="player-name-overlay">محمد نشأت<br>#</span>
+                    </div>
+                    <div class="player-spot fw-2-5v5" data-position="مهاجم">
+                        <img src="photo/عبده جمال.png" alt="مهاجم 2" class="pitch-player-img">
+                        <span class="player-name-overlay">عبده جمال<br>#</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2>تشكيلة الخماسي (أسوء تشكيلة)</h2>
+        <section id="worst-5-a-side-formation-section">
+            <div class="football-pitch five-a-side-pitch">
+                <div class="player-positions five-a-side-positions">
+                    <div class="player-spot gk-spot-5v5" data-position="حارس">
+                        <img src="photo/player-gk-worst.jpg" alt="حارس" class="pitch-player-img">
+                        <span class="player-name-overlay">أسوء حارس<br>#</span>
+                    </div>
+                    <div class="player-spot df-1-5v5" data-position="مدافع">
+                        <img src="photo/player-def1-worst.jpg" alt="مدافع 1" class="pitch-player-img">
+                        <span class="player-name-overlay">أسوء مدافع 1<br>#</span>
+                    </div>
+                    <div class="player-spot df-2-5v5" data-position="مدافع">
+                        <img src="photo/player-def2-worst.jpg" alt="مدافع 2" class="pitch-player-img">
+                        <span class="player-name-overlay">أسوء مدافع 2<br>#</span>
+                    </div>
+                    <div class="player-spot fw-1-5v5" data-position="مهاجم">
+                        <img src="photo/player-fw1-worst.jpg" alt="مهاجم 1" class="pitch-player-img">
+                        <span class="player-name-overlay">أسوء مهاجم 1<br>#</span>
+                    </div>
+                    <div class="player-spot fw-2-5v5" data-position="مهاجم">
+                        <img src="photo/player-fw2-worst.jpg" alt="مهاجم 2" class="pitch-player-img">
+                        <span class="player-name-overlay">أسوء مهاجم 2<br>#</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <h2>فيديوهات عبثية</h2>
         <p class="section-description">استمتع بمجموعة من اللقطات المضحكة واللحظات الفريدة من مبارياتنا، فقط للمتعة والترفيه!</p>
@@ -163,15 +220,32 @@
         <div class="modal-content">
             <span class="close-button-modal">×</span>
             <div class="modal-body">
-                <img src="" alt="صورة اللاعب" class="modal-player-img" id="modalPlayerImg">
+                <img src="photo/نسر الحجز hd.jpg" alt="صورة اللاعب" class="modal-player-img" id="modalPlayerImg">
                 <h3 id="modalPlayerName"></h3>
                 <p>المركز: <span id="modalPlayerPosition"></span></p>
                 <p>الرقم: <span id="modalPlayerNumber"></span></p>
                 <p>الأهداف: <span id="modalPlayerGoals"></span></p>
                 <p>الأسيست: <span id="modalPlayerAssists"></span></p>
                 <p>التصديات: <span id="modalPlayerSaves"></span></p>
-                <p>جائزة أفضل لاعب: <span id="modalPlayerAwards"></span> مرة</p>
+                <p>جوائز أفضل لاعب: <span id="modalPlayerAwards"></span></p>
             </div>
+        </div>
+    </div>
+
+    <div id="celebrationPopup" class="modal">
+        <div class="modal-content celebration-content">
+            <span class="close-button-popup">×</span>
+            <img src="photo/نسر الحجز hd.jpg" alt="نسر الحجز" class="celebration-image">
+            <h3 class="celebration-text">تهانينا!</h3>
+            <p class="celebration-date"> نسر الحجز!</p>
+            <p> **عبد الرحمن شوقي**</p>
+            <p>المركز: وسط دفاعي</p>
+            <p>الرقم: 24</p>
+            <p>الأهداف: 5</p>
+            <p>الأسيست: 8</p>
+            <p>التصديات: 10</p>
+            <p>نسر الحجز: **المرة الثانية!**</p>
+            <audio id="celebrationAudio" src="audio/Mohamed Mounir - Fi 3esh2 El Banat _ محمد منير - في عشق البنات(MP3_160K).mp3"  loop></audio>
         </div>
     </div>
 
@@ -227,7 +301,6 @@
             // ملء قسم "نجوم التحنيكة"
             const playersSection = document.getElementById('players-section');
             if (playersSection) {
-                // Temporary storage for players categorized by line
                 const categorizedPlayers = {
                     'خط الهجوم': [],
                     'خط الوسط': [],
@@ -235,12 +308,11 @@
                     'حراس المرمى': []
                 };
 
-                // Populate categories with players
                 Object.keys(playersData).forEach(playerId => {
-                    const player = { id: playerId, ...playersData[playerId] }; // Add player ID to the object
+                    const player = { id: playerId, ...playersData[playerId] };
                     if (player.position.includes('مهاجم') || player.position.includes('جناح')) {
                         categorizedPlayers['خط الهجوم'].push(player);
-                    } else if (player.position.includes('وسط') || player.position.includes('محور')) {
+                    } else if (player.position.includes('وسط') || player.position.includes('محور') || player.position.includes('صانع العاب')) {
                         categorizedPlayers['خط الوسط'].push(player);
                     } else if (player.position.includes('دفاع') || player.position.includes('ظهير') || player.position.includes('قلب دفاع')) {
                         categorizedPlayers['خط الدفاع'].push(player);
@@ -249,17 +321,18 @@
                     }
                 });
 
-                // Clear existing content before rendering
-                playersSection.innerHTML = '';
+                playersSection.innerHTML = ''; // Clear existing content
 
-                // Iterate through the desired display order of categories
                 const orderedCategoryTitles = ['خط الهجوم', 'خط الوسط', 'خط الدفاع', 'حراس المرمى'];
 
                 orderedCategoryTitles.forEach(categoryTitle => {
                     let playersInThisCategory = categorizedPlayers[categoryTitle];
 
-                    // Sort players within each category (e.g., by goals descending)
-                    playersInThisCategory.sort((a, b) => b.goals - a.goals);
+                    if (categoryTitle === 'حراس المرمى') {
+                        playersInThisCategory.sort((a, b) => b.saves - a.saves);
+                    } else {
+                        playersInThisCategory.sort((a, b) => b.goals - a.goals);
+                    }
 
                     if (playersInThisCategory.length > 0) {
                         const categoryDiv = document.createElement('div');
@@ -290,7 +363,7 @@
                 });
             }
 
-            // Modal elements
+            // Modal elements for player details
             const playerModal = document.getElementById('playerModal');
             const closeButton = document.querySelector('.close-button-modal');
             const modalPlayerImg = document.getElementById('modalPlayerImg');
@@ -302,7 +375,6 @@
             const modalPlayerSaves = document.getElementById('modalPlayerSaves');
             const modalPlayerAwards = document.getElementById('modalPlayerAwards');
 
-            // وظيفة لفتح المودال وعرض بيانات اللاعب
             function openPlayerModal(playerId) {
                 const player = playersData[playerId];
                 if (player) {
@@ -315,18 +387,16 @@
                     modalPlayerAssists.textContent = player.assists;
                     modalPlayerSaves.textContent = player.saves;
                     modalPlayerAwards.textContent = player.bestPlayerAwards;
-                    playerModal.style.display = 'flex'; // Use flex to center
-                    document.body.style.overflow = 'hidden'; // منع السكرول للصفحة
+                    playerModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
                 }
             }
 
-            // وظيفة لإغلاق المودال
             function closePlayerModal() {
                 playerModal.style.display = 'none';
-                document.body.style.overflow = ''; // استعادة السكرول للصفحة
+                document.body.style.overflow = '';
             }
 
-            // إضافة event listeners لصور اللاعبين في الملعب (Dream Team)
             const pitchPlayerImages = document.querySelectorAll('.player-spot[data-player-id]');
             pitchPlayerImages.forEach(spot => {
                 spot.addEventListener('click', (event) => {
@@ -337,9 +407,6 @@
                 });
             });
 
-
-            // إضافة event listeners لكروت اللاعبين في قسم "نجوم التحنيكة"
-            // نستخدم delegation لأن الكروت يتم إنشاؤها ديناميكيًا
             playersSection.addEventListener('click', (event) => {
                 const playerCard = event.target.closest('.player-card');
                 if (playerCard) {
@@ -350,8 +417,6 @@
                 }
             });
 
-
-            // إضافة event listeners للاعبين في مقاعد البدلاء
             const substituteSpots = document.querySelectorAll('.substitute-spot');
             substituteSpots.forEach(spot => {
                 spot.addEventListener('click', (event) => {
@@ -362,23 +427,80 @@
                 });
             });
 
-
-            // إضافة event listener لزر الإغلاق
             if (closeButton) {
                 closeButton.addEventListener('click', closePlayerModal);
             }
 
-            // إغلاق المودال عند الضغط خارجه
             window.addEventListener('click', (event) => {
                 if (event.target === playerModal) {
                     closePlayerModal();
                 }
             });
 
-            // إضافة event listener لإغلاق المودال بزر Esc
             document.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape' && playerModal.style.display === 'flex') {
                     closePlayerModal();
+                }
+            });
+
+            // --- Celebration Pop-up Logic (نسر الحجز) ---
+            const celebrationPopup = document.getElementById('celebrationPopup');
+            const closeButtonPopup = document.querySelector('.close-button-popup');
+            const celebrationAudio = document.getElementById('celebrationAudio');
+
+            function fireConfetti() {
+                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                confetti({ particleCount: 70, spread: 80, origin: { x: 0.2, y: 0.8 }, colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'] });
+                confetti({ particleCount: 70, spread: 80, origin: { x: 0.8, y: 0.8 }, colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'] });
+            }
+
+            function showCelebrationPopup() {
+                if (celebrationPopup) {
+                    celebrationPopup.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+
+                    // Attempt to play audio. The 'play()' method returns a Promise.
+                    // Autoplay policies might still block it, but this is the standard approach.
+                    if (celebrationAudio) {
+                        celebrationAudio.play().catch(e => {
+                            console.error("Error playing audio automatically:", e);
+                            // Optionally, inform the user if autoplay failed and they need to interact
+                            // alert("المتصفح حظر التشغيل التلقائي للصوت. يرجى التأكد من تفعيل الصوت يدويًا إذا لم يتم تشغيله.");
+                        });
+                    }
+                    fireConfetti();
+                }
+            }
+
+            function hideCelebrationPopup() {
+                if (celebrationPopup) {
+                    celebrationPopup.style.display = 'none';
+                    document.body.style.overflow = '';
+                    if (celebrationAudio) {
+                        celebrationAudio.pause();
+                        celebrationAudio.currentTime = 0;
+                    }
+                }
+            }
+
+            // Show the pop-up and play audio automatically on page load
+            // This might still be blocked by some browsers' autoplay policies
+            // for media with sound if the user hasn't interacted with the page yet.
+            showCelebrationPopup(); // Trigger immediately on load
+
+            if (closeButtonPopup) {
+                closeButtonPopup.addEventListener('click', hideCelebrationPopup);
+            }
+
+            window.addEventListener('click', (event) => {
+                if (event.target === celebrationPopup) {
+                    hideCelebrationPopup();
+                }
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && celebrationPopup.style.display === 'flex') {
+                    hideCelebrationPopup();
                 }
             });
         });
